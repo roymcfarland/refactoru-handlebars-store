@@ -1,0 +1,18 @@
+.title {
+	margin-left: 50px;
+	width: 375px;
+	border-bottom: 2px dashed peachpuff;
+	color: gray;
+}
+
+.cost {
+	margin-left: 50px;
+}
+
+.details {
+	margin-left: 50px;
+}
+
+.image {
+	margin-left: 100px;
+}
