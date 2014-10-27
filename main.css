@@ -1,7 +1,13 @@
+.titleTop {
+	margin-left: 50px;
+	width: 375px;
+	color: gray;
+}
+
 .title {
 	margin-left: 50px;
 	width: 375px;
-	border-bottom: 2px dashed peachpuff;
+	border: 2px dashed peachpuff;
 	color: gray;
 }
 
