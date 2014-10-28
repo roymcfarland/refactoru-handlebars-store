@@ -1,4 +1,4 @@
-.titleTop {
+.topHeader {
 	margin-left: 50px;
 	width: 375px;
 	color: gray;
@@ -7,7 +7,8 @@
 .title {
 	margin-left: 50px;
 	width: 375px;
-	border: 2px dashed peachpuff;
+	border: 2px solid peachpuff;
+	background-color: peachpuff;
 	color: gray;
 }
 
@@ -17,6 +18,7 @@
 
 .details {
 	margin-left: 50px;
+	font-size: 1.5em;
 }
 
 .image {

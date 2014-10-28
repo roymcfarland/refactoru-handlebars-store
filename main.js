@@ -41,18 +41,39 @@ $(document).on('ready', function() {
 	// Get the HTML content of our template and store it
 	// as a JavaScript variable
 	var templateSource = $('#product-template').html();
-	console.log(templateSource);
+	// console.log(templateSource);
 
 	// Have handlebars compile this sources into a
 	// reusable template function
 	var template = Handlebars.compile(templateSource);
-	console.log(template);
+	// console.log(template);
 
 	// Use the template to generate new HTML content
 	var outputHTML = template(productsData);
-	console.log(outputHTML);
+	// console.log(outputHTML);
 
 	// Append outputHTML to the page
 	$('#product-container').append(outputHTML);
+
+  $(document).on('click', '.addToWishList', function(e){
+      e.preventDefault();
+      var newItemTitle = $(this).siblings('.title').text();
+      var newObject = {
+        title: newItemTitle
+      };
+      var element = wishListItems(newObject);
+      $('#wishlist').append(element);
+  });
+
+  var wishlistSource = $('#wishlist-template').html();
+  // console.log(wishlistSource);
+
+  var wishListItems = Handlebars.compile(wishlistSource);
+  // console.log(wishListItems);
+  
+  $(document).on('click', '.removeFromWishList', function(e){
+      e.preventDefault();
+      $(this).closest('.wishlist-list').remove();
+  });
   
 });
